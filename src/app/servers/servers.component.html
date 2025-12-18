@@ -4,7 +4,15 @@
 <input
   type="text"
   class="form-control"
-  (input)="onUpdateServerName($event)">
+  [(ngModel)]="serverName">
+<!--  #myVar="ngModel"-->
+<!--  (ngModelChange)="logModel(myVar)">-->
+
+<!--<input-->
+<!--  type="text"-->
+<!--  class="form-control"-->
+<!--  (input)="onUpdateServerName($event)">-->
+
 <p>{{ serverName }}</p>
 <button
   class="btn bg-primary"

@@ -30,4 +30,8 @@ export class ServersComponent {
   onUpdateServerName(event: Event) {
     this.serverName = (<HTMLInputElement>event.target).value;
   }
+
+  // logModel(myVar) {
+  //   console.log(myVar);
+  // }
 }
