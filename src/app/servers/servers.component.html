@@ -2,4 +2,4 @@
 <app-server></app-server>
 <button class="btn bg-primary" [disabled]="waitingForNewServer">New Server</button>
 <br>
-<br>
+<p [innerText]="'Waiting for new server (' + waitingForNewServer + ')'"></p>
