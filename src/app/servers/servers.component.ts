@@ -13,6 +13,7 @@ import { Component } from '@angular/core';
 })
 export class ServersComponent {
   waitingForNewServer: boolean = true;
+  serverCreationStatus: string = 'No server was created!';
 
   constructor() {
     setTimeout(
@@ -21,4 +22,7 @@ export class ServersComponent {
     )
   }
 
+  onServerCreated() {
+    this.serverCreationStatus = 'Server was created!';
+  }
 }

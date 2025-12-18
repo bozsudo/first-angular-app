@@ -1,5 +1,9 @@
 <app-server></app-server>
 <app-server></app-server>
-<button class="btn bg-primary" [disabled]="waitingForNewServer">New Server</button>
+<button
+  class="btn bg-primary"
+  [disabled]="waitingForNewServer"
+  (click)="onServerCreated()">Add Server</button>
 <br>
 <p [innerText]="'Waiting for new server (' + waitingForNewServer + ')'"></p>
+<p>{{ serverCreationStatus }}</p>
