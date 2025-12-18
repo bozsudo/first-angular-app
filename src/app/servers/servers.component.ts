@@ -15,6 +15,7 @@ export class ServersComponent {
   waitingForNewServer: boolean = true;
   serverCreationStatus: string = 'No server was created!';
   serverName: string = '';
+  username: string = '';
 
   constructor() {
     setTimeout(

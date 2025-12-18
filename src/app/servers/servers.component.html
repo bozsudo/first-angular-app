@@ -22,3 +22,14 @@
 <br>
 <p [innerText]="'Waiting for new server (' + waitingForNewServer + ')'"></p>
 <p>{{ serverCreationStatus }}</p>
+
+<label>Username</label>
+<input
+  type="text"
+  class="form-control"
+  [(ngModel)]="username">
+<p>{{ username }}</p>
+<button
+  class="btn bg-primary"
+  [disabled]="username === ''"
+  (click)="username=''">Submit username</button>
