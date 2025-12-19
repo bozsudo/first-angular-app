@@ -11,15 +11,17 @@
           <tr>
             <th>ID</th>
             <th>Timestamp</th>
+            <th>Index</th>
           </tr>
         </thead>
         <tbody>
           <tr
-            *ngFor="let logEvent of logEvents"
+            *ngFor="let logEvent of logEvents; let i = index"
             [ngStyle]="{'backgroundColor': logEvent[0] > 5 ? 'blue' : ''}"
             [ngClass]="{'text-white': logEvent[0] > 5}">
               <td>{{ logEvent[0] }}</td>
               <td>{{ logEvent[1] }}</td>
+              <td>{{ i }}</td>
           </tr>
         </tbody>
       </table>
