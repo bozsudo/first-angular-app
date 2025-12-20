@@ -1,0 +1,18 @@
+<div class="row">
+  <div class="col-xs 12">
+    <button class="btn btn-success">New Recipe</button>
+    <hr>
+    <div class="media" *ngFor="let recipe of recipes">
+      <div class="media-left">
+        <img
+          class="media-object"
+          [src]="recipe.imagePath"
+          style="max-height: 65px">
+      </div>
+      <div class="media-body">
+        <h4 class="media-heading">{{ recipe.name }}</h4>
+        {{ recipe.description }}
+      </div>
+    </div>
+  </div>
+</div>
