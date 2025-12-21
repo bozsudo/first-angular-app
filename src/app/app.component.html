@@ -1,6 +1,33 @@
 <app-header></app-header>
 <div class="container">
   <div class="row">
+    <div class="col-xs-12">
+      <p>Add new servers or blueprints!</p>
+      <label for="name">Server Name</label>
+      <input type="text" name="name" class="form-control" [(ngModel)]="newServerName">
+      <label for="content">Server Content</label>
+      <input type="text" name="content" class="form-control" [(ngModel)]="newServerContent">
+      <button type="button" class="btn btn-primary" (click)="onAddServer()">Add Server</button>
+      <button type="button" class="btn btn-primary" (click)="onAddBlueprint()">Add Server Blueprint</button>
+    </div>
+    <hr>
+  </div>
+  <div class="row">
+    <div class="col-xs-12">
+      <div class="panel panel-default" *ngFor="let element of serverElements">
+        <div class="panel-heading">
+          <h3 class="panel-title">{{ element.name }}</h3>
+        </div>
+        <div class="panel-body">
+          <p>
+            <strong *ngIf="element.type === 'server'" style="color: red">{{ element.content }}</strong>
+            <em *ngIf="element.type === 'blueprint'">{{ element.content }}</em>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
     <div class="col-md-12">
       <app-recipes></app-recipes>
       <app-shopping-list></app-shopping-list>
