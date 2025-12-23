@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import {Component, EventEmitter, Output} from '@angular/core';
 import { Recipe } from "../recipe.model";
 
 @Component({
@@ -19,4 +19,9 @@ export class RecipeListComponent {
       'https://images.immediate.co.uk/production/volatile/sites/30/2020/08/recipe-image-legacy-id-1001491_11-2e0fa5c.jpg'
     )
   ];
+  @Output() onRecipeSelected = new EventEmitter<Recipe>();
+
+  onSelect(recipe: Recipe) {
+    this.onRecipeSelected.emit(recipe);
+  }
 }
