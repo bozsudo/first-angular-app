@@ -1,5 +1,6 @@
 <app-header></app-header>
 <div class="container">
+  <app-game-control (outputIncrement)="onGameStarted($event)"></app-game-control>
   <app-server-edit
     (serverCreated)="onServerAdded($event)"
     (blueprintCreated)="onBlueprintAdded($event)"></app-server-edit>

@@ -1,0 +1,4 @@
+<div class="btn btn-success" (click)="onStart()">Start Game</div>
+<div class="btn btn-danger" (click)="onEnd()">Stop Game</div>
+<app-odd *ngFor="let odd of oddNumbers" [n]="odd"></app-odd>
+<app-even *ngFor="let even of evenNumbers" [n]="even"></app-even>
