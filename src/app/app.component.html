@@ -1,25 +1,5 @@
 <app-header></app-header>
 <div class="container">
-  <app-game-control (outputIncrement)="onGameStarted($event)"></app-game-control>
-  <app-server-edit
-    (serverCreated)="onServerAdded($event)"
-    (blueprintCreated)="onBlueprintAdded($event)"></app-server-edit>
-  <hr>
-  <div class="row">
-    <div class="col-xs-12">
-      <div class="btn btn-primary" (click)="onChangeFirst()">Change First Element</div>
-      <div class="btn btn-danger" (click)="onDestroyFirst()">Destroy First Element</div>
-      <app-server-element
-        *ngFor="let serverElement of serverElements"
-        [serverElement]="serverElement"
-        [name]="serverElement.name">
-        <p #contentParagraph>
-          <strong *ngIf="serverElement.type === 'server'" style="color: red">{{ serverElement.content }}</strong>
-          <em *ngIf="serverElement.type === 'blueprint'">{{ serverElement.content }}</em>
-        </p>
-      </app-server-element>
-    </div>
-  </div>
   <div class="row">
     <div class="col-md-12">
       <app-recipes></app-recipes>
