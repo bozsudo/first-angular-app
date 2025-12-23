@@ -2,18 +2,13 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
-import {FormsModule} from "@angular/forms";
+import { FormsModule } from "@angular/forms";
 import { RecipesComponent } from './recipes/recipes.component';
 import { RecipeListComponent } from './recipes/recipe-list/recipe-list.component';
 import { RecipeItemComponent } from './recipes/recipe-list/recipe-item/recipe-item.component';
 import { ShoppingListComponent } from './shopping-list/shopping-list.component';
 import { ShoppingEditComponent } from './shopping-list/shopping-edit/shopping-edit.component';
 import { HeaderComponent } from './header/header.component';
-import { ServerEditComponent } from './server-edit/server-edit.component';
-import { ServerElementComponent } from './server-element/server-element.component';
-import { GameControlComponent } from './game-control/game-control.component';
-import { OddComponent } from './odd/odd.component';
-import { EvenComponent } from './even/even.component';
 
 @NgModule({
   declarations: [
@@ -24,11 +19,6 @@ import { EvenComponent } from './even/even.component';
     ShoppingListComponent,
     ShoppingEditComponent,
     HeaderComponent,
-    ServerEditComponent,
-    ServerElementComponent,
-    GameControlComponent,
-    OddComponent,
-    EvenComponent
   ],
   imports: [
     BrowserModule,
