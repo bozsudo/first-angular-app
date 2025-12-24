@@ -11,6 +11,9 @@ import { ShoppingEditComponent } from './shopping-list/shopping-edit/shopping-ed
 import { HeaderComponent } from './header/header.component';
 import { RecipeDetailComponent } from './recipe-detail/recipe-detail.component';
 import { DropdownDirective } from './shared/dropdown.directive';
+import { ServicesComponent } from './services/services.component';
+import { AccountComponent } from './services/account/account.component';
+import { NewAccountComponent } from './services/new-account/new-account.component';
 
 @NgModule({
   declarations: [
@@ -23,6 +26,9 @@ import { DropdownDirective } from './shared/dropdown.directive';
     HeaderComponent,
     RecipeDetailComponent,
     DropdownDirective,
+    ServicesComponent,
+    AccountComponent,
+    NewAccountComponent,
   ],
   imports: [
     BrowserModule,

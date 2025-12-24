@@ -6,7 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  page: string = 'recipes';
+  page: string = 'services';
 
   onNavigate($event: string) {
     this.page = $event;
