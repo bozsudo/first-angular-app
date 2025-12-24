@@ -2,14 +2,16 @@
   <div class="panel-heading clearfix">
     <h3 class="panel-title pull-left">{{ selectedRecipe.name }}</h3>
     <div class="dropdown pull-right">
-      <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
-        Manage Recipe <span class="caret"></span>
-      </button>
-      <ul class="dropdown-menu">
-        <li><a href="#">To Shopping List</a></li>
-        <li><a href="#">Edit Recipe</a></li>
-        <li><a href="#">Delete Recipe</a></li>
-      </ul>
+      <div class="btn-group" appDropdown>
+        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+          Manage Recipe <span class="caret"></span>
+        </button>
+        <ul class="dropdown-menu">
+          <li><a href="#">To Shopping List</a></li>
+          <li><a href="#">Edit Recipe</a></li>
+          <li><a href="#">Delete Recipe</a></li>
+        </ul>
+      </div>
     </div>
   </div>
   <div class="panel-body">
