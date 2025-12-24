@@ -1,21 +1,20 @@
-import { Component } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
+import {UsersService} from "./users.service";
 
 @Component({
   selector: 'app-assignment-5-services',
   templateUrl: './assignment-5-services.component.html',
-  styleUrl: './assignment-5-services.component.css'
+  styleUrl: './assignment-5-services.component.css',
+  providers: [UsersService]
 })
-export class Assignment5ServicesComponent {
-  activeUsers = ['Max', 'Anna'];
-  inactiveUsers = ['Chris', 'Manu'];
+export class Assignment5ServicesComponent implements OnInit {
+  activeUsers: string[] = [];
+  inactiveUsers: string[] = [];
 
-  onSetToInactive(id: number) {
-    this.inactiveUsers.push(this.activeUsers[id]);
-    this.activeUsers.splice(id, 1);
-  }
+  constructor(private usersService: UsersService) {}
 
-  onSetToActive(id: number) {
-    this.activeUsers.push(this.inactiveUsers[id]);
-    this.inactiveUsers.splice(id, 1);
+  ngOnInit() {
+    this.activeUsers = this.usersService.activeUsers;
+    this.inactiveUsers = this.usersService.inactiveUsers;
   }
 }
