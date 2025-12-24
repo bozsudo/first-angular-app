@@ -1,18 +1,20 @@
-import {Component, EventEmitter, Input, Output} from '@angular/core';
+import {Component, EventEmitter, inject, Input, Output} from '@angular/core';
 import {LoggingService} from "../logging.service";
 
 @Component({
   selector: 'app-account',
   templateUrl: './account.component.html',
-  styleUrl: './account.component.css',
-  providers: [LoggingService]
+  styleUrl: './account.component.css'
 })
 export class AccountComponent {
   @Input() account: { name: string; status: string };
   @Input() id: number;
   @Output() statusChanged = new EventEmitter<{id: number, newStatus: string}>();
+  private loggingService?: LoggingService;
 
-  constructor(private loggingService: LoggingService) { }
+  constructor() {
+    this.loggingService = inject(LoggingService);
+  }
 
   onSetTo(status: string) {
     this.account.status = status;
