@@ -11,9 +11,12 @@ import { ShoppingEditComponent } from './shopping-list/shopping-edit/shopping-ed
 import { HeaderComponent } from './header/header.component';
 import { RecipeDetailComponent } from './recipe-detail/recipe-detail.component';
 import { DropdownDirective } from './shared/dropdown.directive';
-import { ServicesComponent } from './services/services.component';
-import { AccountComponent } from './services/account/account.component';
-import { NewAccountComponent } from './services/new-account/new-account.component';
+import { ServicesComponent } from './course-content/services/services.component';
+import { AccountComponent } from './course-content/services/account/account.component';
+import { NewAccountComponent } from './course-content/services/new-account/new-account.component';
+import { Assignment5ServicesComponent } from './course-content/assignment-5-services/assignment-5-services.component';
+import { ActiveUsersComponent } from './course-content/assignment-5-services/active-users/active-users.component';
+import { InactiveUsersComponent } from './course-content/assignment-5-services/inactive-users/inactive-users.component';
 
 @NgModule({
   declarations: [
@@ -29,6 +32,9 @@ import { NewAccountComponent } from './services/new-account/new-account.componen
     ServicesComponent,
     AccountComponent,
     NewAccountComponent,
+    Assignment5ServicesComponent,
+    ActiveUsersComponent,
+    InactiveUsersComponent,
   ],
   imports: [
     BrowserModule,

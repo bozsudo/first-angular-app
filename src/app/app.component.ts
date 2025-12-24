@@ -6,7 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  page: string = 'services';
+  page: string = 'assignment-5-services';
 
   onNavigate($event: string) {
     this.page = $event;
