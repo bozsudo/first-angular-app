@@ -17,6 +17,7 @@ import { NewAccountComponent } from './course-content/services/new-account/new-a
 import { Assignment5ServicesComponent } from './course-content/assignment-5-services/assignment-5-services.component';
 import { ActiveUsersComponent } from './course-content/assignment-5-services/active-users/active-users.component';
 import { InactiveUsersComponent } from './course-content/assignment-5-services/inactive-users/inactive-users.component';
+import {ShoppingListService} from "./shopping-list/shopping-list.service";
 
 @NgModule({
   declarations: [
@@ -40,7 +41,7 @@ import { InactiveUsersComponent } from './course-content/assignment-5-services/i
     BrowserModule,
     FormsModule
   ],
-  providers: [],
+  providers: [ShoppingListService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
