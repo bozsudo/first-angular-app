@@ -17,5 +17,16 @@
   <div class="panel-body">
     <p>{{ selectedRecipe.description }}</p>
     <p>Ingredients</p>
+    <div class="row">
+      <div class="col-xs-12">
+        <ul class="list-group">
+          <li
+            class="list-group-item"
+            *ngFor="let ingredient of selectedRecipe.ingredients">
+            {{ ingredient.name }} – {{ ingredient.amount }}
+          </li>
+        </ul>
+      </div>
+    </div>
   </div>
 </div>
